@@ -27,7 +27,8 @@ vector<int> Solution::inorderTraversal(TreeNode* A) {
         stk.pop();
         ans.push_back(cur->val);
         cur=cur->right;
-        cur = insert(cur, stk);
+        if(cur != NULL)
+            cur = insert(cur, stk);
     }
     
     return ans;
